@@ -103,7 +103,7 @@ def filter_reply_msg(response_df, cosine_cut_off, count_cutoff):
         if len(reply.split()) <= 5:
             continue
         # have special characters
-        if len(re.findall(r"[~@#\$%\^&\*\(\)_\+{}\":;\[\]\/]|(\.\.\.)", reply)) != 0:
+        if len(re.findall(r"[~@#\$%\^&\*\(\)_\+{}\":;\[\]\/öü]|(\.\.\.)", reply)) != 0:
             continue
         else:
             filtered_msg.append(reply)
